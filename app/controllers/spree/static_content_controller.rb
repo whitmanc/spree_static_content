@@ -6,12 +6,12 @@ class Spree::StaticContentController < Spree::BaseController
     when Array
       '/' + params[:path].join("/")
     when String
-      params[:path]
+      '/' + params[:path]
     when nil
       request.path
     end
 
-    unless @page = Page.visible.find_by_slug(path)
+    unless @page = Spree::Page.visible.find_by_slug(path)
       render_404
     end
   end
