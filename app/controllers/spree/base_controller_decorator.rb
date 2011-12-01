@@ -1,7 +1,7 @@
 Spree::BaseController.class_eval do
   # ProductsHelper needed for seo_url method used when generating
   # taxonomies partial in content/show.html.erb.
-  helper :products
+  helper 'spree/products'
   # Use before_filter instead of prepend_before_filter to ensure that
   # ApplicationController filters that the view may require are run.
   before_filter :render_page_if_exists
