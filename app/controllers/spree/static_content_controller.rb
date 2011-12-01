@@ -1,6 +1,6 @@
-class StaticContentController < Spree::BaseController
+class Spree::StaticContentController < Spree::BaseController
   caches_action :show
-  
+
   def show
     path = case params[:path]
     when Array
@@ -15,9 +15,9 @@ class StaticContentController < Spree::BaseController
       render_404
     end
   end
-  
+
   private
-  
+
   def accurate_title
     @page ? (@page.meta_title ? @page.meta_title : @page.title) : nil
   end
