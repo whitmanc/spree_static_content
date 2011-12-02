@@ -1,8 +1,7 @@
-class Page < ActiveRecord::Base
-
-end
-
 class ExtendPages < ActiveRecord::Migration
+  class Page < ActiveRecord::Base
+  end
+
   def self.up
     change_table :pages do |t|
       t.boolean :show_in_header, :default => false, :null => false
