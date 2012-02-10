@@ -1,8 +1,9 @@
 source :rubygems
 
-gem 'sqlite3'
-
-gem 'spree', :git => 'git://github.com/spree/spree.git'
+group :development, :test do
+  gem 'spree', '1.0.0.rc4'
+  gem 'sqlite3'
+end
 
 group :test do
   gem 'rspec-rails', '= 2.6.1'
