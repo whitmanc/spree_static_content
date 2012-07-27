@@ -10,8 +10,8 @@ class Spree::StaticContentController < Spree::BaseController
     when nil
       request.path
     end
-
-    unless @page = Spree::Page.visible.find_by_slug(path)
+    
+    unless @page = Spree::Page.visible.by_slug(path).first
       render_404
     end
   end
