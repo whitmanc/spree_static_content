@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
+<<<<<<< HEAD
   s.add_dependency 'spree_core', '~> 1.1.0'
   s.add_dependency 'spree_auth', '~> 1.1.0'
   
@@ -23,5 +24,11 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'rspec-rails',  '~> 2.7'
   s.add_development_dependency 'sqlite3'
+=======
+  s.add_dependency 'spree_core', '>= 1.0.0'
+  s.add_dependency 'spree_auth', '>= 1.0.0'
+  s.add_dependency 'formtastic'
+  s.add_development_dependency 'rspec-rails'
+>>>>>>> 54895407a8bcb1a0887ab4dbde8e92e05a0a270d
 end
 
