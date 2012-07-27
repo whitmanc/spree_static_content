@@ -8,9 +8,9 @@ class Spree::StaticContentController < Spree::BaseController
   def show
     path = case params[:path]
     when Array
-      '/' + params[:path].join("/")
+      params[:path].join("/")
     when String
-      '/' + params[:path]
+      params[:path]
     when nil
       request.path
     end
